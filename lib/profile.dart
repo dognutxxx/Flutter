@@ -11,7 +11,7 @@ class Profile extends StatelessWidget {
         title: const Text('Profile'),
         centerTitle: true,
       ),
-      body: const SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(16.0),
           child: Card(
@@ -34,10 +34,13 @@ class Profile extends StatelessWidget {
                   ),
                   SizedBox(height: 10),
                   Center(
-                    child: Image(
-                      image: AssetImage("assets/images/nut_1.jpg"),
-                      height: 200.0,
-                      width: 200.0,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(100.0),
+                      child: Image(
+                        image: AssetImage("assets/images/nut_1.jpg"),
+                        height: 200.0,
+                        width: 200.0,
+                      ),
                     ),
                   ),
                   SizedBox(height: 20),
