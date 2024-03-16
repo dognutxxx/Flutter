@@ -94,7 +94,9 @@ class _HomePageState extends State<HomePage> {
                   padding: const EdgeInsets.all(0.0),
                   color: const Color.fromRGBO(150, 145, 40, 1),
                   child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, 'video_presentation');
+                      },
                       child: const Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [

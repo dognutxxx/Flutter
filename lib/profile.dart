@@ -13,16 +13,16 @@ class Profile extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           child: Card(
             child: Padding(
-              padding: EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(16.0),
               child: Column(
                 // crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  SizedBox(height: 20),
-                  Padding(
+                  const SizedBox(height: 20),
+                  const Padding(
                     padding: EdgeInsets.all(8.0),
                     child: Text(
                       'My profile',
@@ -32,29 +32,29 @@ class Profile extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Center(
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(100.0),
-                      child: Image(
+                      child: const Image(
                         image: AssetImage("assets/images/nut_1.jpg"),
                         height: 200.0,
                         width: 200.0,
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
-                  Text(
+                  const SizedBox(height: 20),
+                  const Text(
                     'Arnon Prommoon',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 15),
-                  Text(
+                  const SizedBox(height: 15),
+                  const Text(
                     'Full Stack Deverloper',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 15),
-                  Center(
+                  const SizedBox(height: 15),
+                  const Center(
                     child: ListTile(
                       leading: Icon(Icons.phone),
                       title: Text(
@@ -70,8 +70,8 @@ class Profile extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
-                  Center(
+                  const SizedBox(height: 10),
+                  const Center(
                     child: ListTile(
                       leading: Icon(Icons.email),
                       title: Text(
