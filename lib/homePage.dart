@@ -68,7 +68,9 @@ class _HomePageState extends State<HomePage> {
                   padding: const EdgeInsets.all(0.0),
                   color: const Color.fromRGBO(80, 145, 120, 1),
                   child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, 'my_map');
+                      },
                       child: const Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -122,7 +124,9 @@ class _HomePageState extends State<HomePage> {
                   padding: const EdgeInsets.all(0.0),
                   color: const Color.fromRGBO(255, 130, 182, 51),
                   child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, 'my_age');
+                      },
                       child: const Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
