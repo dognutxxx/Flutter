@@ -176,7 +176,7 @@ class _HomePageState extends State<HomePage> {
                   color: const Color.fromRGBO(255, 130, 182, 51),
                   child: TextButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, 'my_port');
+                        Navigator.pushNamed(context, 'blog');
                       },
                       child: const Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -189,7 +189,7 @@ class _HomePageState extends State<HomePage> {
                           Padding(
                             padding: EdgeInsets.all(8.0),
                             child: Text(
-                              "ผลงาน",
+                              "blog",
                               style: TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myaboutme/blog.dart';
 import 'package:myaboutme/homePage.dart';
 import 'package:myaboutme/login.dart';
 import 'package:myaboutme/myAge.dart';
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
           'my_map': (BuildContext context) => const MyMap(),
           'my_age': (BuildContext context) => const MyAge(),
           'my_port': (BuildContext context) => const MyPort(),
+          'blog': (BuildContext context) => const Blog(),
         });
   }
 }
