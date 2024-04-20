@@ -5,6 +5,7 @@ import 'package:myaboutme/login.dart';
 import 'package:myaboutme/myAge.dart';
 import 'package:myaboutme/myMap.dart';
 import 'package:myaboutme/myPort.dart';
+import 'package:myaboutme/product_list.dart';
 import 'package:myaboutme/profile.dart';
 import 'package:myaboutme/videoPresentation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
           'my_age': (BuildContext context) => const MyAge(),
           'my_port': (BuildContext context) => const MyPort(),
           'blog': (BuildContext context) => const Blog(),
+          'product': (BuildContext context) => const ProductList(),
         });
   }
 }

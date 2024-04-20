@@ -204,7 +204,7 @@ class _HomePageState extends State<HomePage> {
                   color: const Color.fromRGBO(255, 130, 182, 51),
                   child: TextButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, 'my_port');
+                        Navigator.pushNamed(context, 'product');
                       },
                       child: const Column(
                         mainAxisAlignment: MainAxisAlignment.center,

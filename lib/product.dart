@@ -13,7 +13,7 @@ class _ProductState extends State<Product> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.secondary,
-        title: const Text('สินค้า'),
+        title: const Text('Product'),
         centerTitle: true,
       ),
     );
