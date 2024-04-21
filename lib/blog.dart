@@ -43,7 +43,6 @@ class _BlogState extends State<Blog> {
   }
 
   Widget build(BuildContext context) {
-    print(blogList);
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.secondary,
