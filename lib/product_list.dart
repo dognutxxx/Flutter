@@ -101,7 +101,29 @@ class _ProductListState extends State<ProductList> {
                             alignment: MainAxisAlignment.end,
                             children: [
                               ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => ProductDetail(
+                                                  productName: productList[
+                                                              index]
+                                                          ["product_name"] ??
+                                                      '',
+                                                  productCover: productList[
+                                                              index]
+                                                          ["product_cover"] ??
+                                                      '',
+                                                  productDescription: productList[
+                                                              index][
+                                                          "product_description"] ??
+                                                      '',
+                                                  productPrice: productList[
+                                                              index]
+                                                          ["product_price"] ??
+                                                      '',
+                                                )));
+                                  },
                                   style: ElevatedButton.styleFrom(
                                       backgroundColor: const Color.fromRGBO(
                                           24, 177, 252, 1)),
@@ -118,5 +140,59 @@ class _ProductListState extends State<ProductList> {
             ))
           ],
         ));
+  }
+}
+
+class ProductDetail extends StatefulWidget {
+  const ProductDetail({
+    Key? key,
+    required this.productName,
+    required this.productCover,
+    required this.productDescription,
+    required this.productPrice,
+  }) : super(key: key);
+
+  final String productName;
+  final String productCover;
+  final String productDescription;
+  final String productPrice;
+
+  @override
+  _ProductDetailState createState() => _ProductDetailState();
+}
+
+class _ProductDetailState extends State<ProductDetail> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.secondary,
+        centerTitle: true,
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Card(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Image.network(widget.productCover),
+                ListTile(
+                  title: Text(widget.productName),
+                  subtitle: Text(widget.productDescription),
+                ),
+                Text(
+                  'ราคา ${widget.productPrice}',
+                  style: const TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
